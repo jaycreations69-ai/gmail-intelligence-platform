@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: gmail-intelligence-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node src/index.js
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: FRONTEND_URL
+        value: https://frontend-seven-coral-30.vercel.app
+      - key: SUPABASE_URL
+        placeholder: Enter your Supabase project URL
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        placeholder: Enter your Supabase Service Role API Key
+      - key: GOOGLE_CLIENT_ID
+        placeholder: Enter your Google Cloud Client ID
+      - key: GOOGLE_CLIENT_SECRET
+        placeholder: Enter your Google Cloud Client Secret
+      - key: GOOGLE_REDIRECT_URI
+        placeholder: Enter your Redirect URI (https://<backend-render-url>/api/auth/google/callback)
+      - key: GEMINI_API_KEY
+        placeholder: Enter your Google Gemini API Key
+      - key: NVIDIA_API_KEY
+        placeholder: Enter your NVIDIA NIM API Key
