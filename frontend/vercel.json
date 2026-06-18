@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://gmail-intelligence-backend-production.up.railway.app/api/:path*"
+    },
+    {
+      "source": "/((?!assets/|favicon.ico).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
